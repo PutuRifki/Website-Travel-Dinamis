@@ -1,2 +1,1 @@
-# Website-Travel-Dinamis
-Website travel menggunakan HTML TAILWIND JS PHP
+# Website Travel dinamis dengan HTML, CSS, Javascript, dan PHP
