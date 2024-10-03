@@ -3,19 +3,27 @@ module.exports = {
   content: [
     './src/**/*.{html,js,php}',
     './components/**/*.{html,js,php}',
+    './auth/**/*.{html,js,php}', // tambahkan folder lain jika diperlukan
     './index.php',
+  ],
+  safelist: [
+    'bg-gradient-to-r',
+    'from-blue-start',
+    'to-pink-end',
   ],
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'], // Tambahkan font Poppins
-        inter: ['Inter', 'sans-serif'],     // Font Inter
+        poppins: ['Poppins', 'sans-serif'], 
+        inter: ['Inter', 'sans-serif'],     
       },
       colors: {
-        'pink-gradient': '#F85E9F',
+        'blue': '#0083B0', 
+        'pink': '#DB009E',
         'purple-gradient': '#5D50C6',
+        'pink-gradient': '#F85E9F',
       },
     },
   },
   plugins: [],
-}
+};

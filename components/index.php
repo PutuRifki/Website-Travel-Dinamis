@@ -34,10 +34,9 @@
                             <a href="#" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium leading-[0.12em] hover:text-[#191825]/50">Contact Us</a>
                         </div>
                         <div class="flex flex-row justify-center items-center gap-10">
-                            <a href="./auth/login.php" class="font-poppins text-[13.81px] font-semibold leading-[0.12em] text-[#222831] hover:text-[#222831]/70">Log In</a>
-                            <a href="" class="text-white font-poppins font-semibold text-[13.81px] leading-[0.12em]">
+                            <a href="./auth/login.php" class="text-white font-poppins font-semibold text-[13.81px] leading-[0.12em]">
                                 <div class="bg-[#5D50C6] w-[117.12px] h-[48.56px] rounded-[98.62px] flex justify-center items-center shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">
-                                    Sign Up
+                                    Login
                                 </div>
                             </a>
                         </div>

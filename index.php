@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Official Made Subudi Bali Tour</title>
     <link href="src/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+    <link href="node_modules/aos/dist/aos.css" rel="stylesheet" >
     <style>
         .gradient {
             background: linear-gradient(90deg, #F85E9F 0%, #5D50C6 100%);
@@ -24,9 +24,9 @@
 <body>
     <?php navbar(); ?>
     <!-- home -->
-    <div id="home" class="flex justify-between mt-28">
+    <div id="home" class="flex justify-between mt-28" data-aos="fade-up">
 
-        <div class="flex flex-col px-24 gap-5 mt-16" >
+        <div class="flex flex-col px-24 gap-5 mt-16">
             <div class="flex flex-row gap-5 rounded-[98.62px] w-[230.56px] h-[55.23px] justify-center items-center bg-[#FFFFFF] shadow-2xl">
                 <p class="font-poppins font-bold text-[13.81px] leading-[0.12em] text-[#F85E9F]">Explore the Bali!</p>
                 <?php iconTas(); ?>
@@ -61,7 +61,7 @@
     <!-- what we serve -->
     <div class="mt-36 flex justify-between px-24">
 
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-3"  data-aos="fade-up">
             <p class="font-poppins font-semibold text-[17.75px] tracking-[0.018em] text-[#F85E9F]">
                 WHAT WE SERVE
             </p>
@@ -74,7 +74,7 @@
             </p>
         </div>
 
-        <div class="flex flex-row gap-28">
+        <div class="flex flex-row gap-28" data-aos="fade-right">
 
             <div class="flex flex-col gap-5">
                 <img src="assets/lot-of-choice.png" class="w-[101.64px] h-[76.23px]" alt="">
@@ -86,7 +86,7 @@
                 </p>
             </div>
 
-            <div class="flex flex-col gap-5">
+            <div class="flex flex-col gap-5" data-aos="fade-up">
                 <img src="assets/best-tour-guide.png" class="w-[83.96px] h-[78.29]" alt="">
                 <p class="font-poppins font-semibold text-[23.88px] leading-[31.8px] tracking-[0.1px] text-[#191825]">
                     Best Tour Guide
@@ -96,7 +96,7 @@
                 </p>
             </div>
 
-            <div class="flex flex-col gap-5">
+            <div class="flex flex-col gap-5" data-aos="fade-right">
                 <img src="assets/easy-booking.png" class="w-[111.39px] h-[85.8px]" alt="">
                 <p class="font-poppins font-semibold text-[23.88px] leading-[31.8px] tracking-[0.1px] text-[#191825]">
                     Easy Booking
@@ -112,7 +112,7 @@
 
     <!-- choose your destination -->
      <div class="mt-36 px-24">
-        <div class="flex flex-row justify-between">
+        <div class="flex flex-row justify-between" data-aos="fade-up">
 
             <div class="flex flex-col">
                 <p class="font-poppins font-semibold text-[17.75px] tracking-[0.018em] leading-[1.2em] text-[#F85E9F] uppercase">
@@ -144,7 +144,7 @@
         <!-- Card Section -->
         <div class="flex justify-between gap-10 mt-10 bg-white">
             <!-- Card 1 -->
-            <div class="relative rounded-2xl p-5">
+            <div class="relative rounded-2xl p-5" data-aos="fade-right">
                 <img src="assets/cappadocia.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg">
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,7 +176,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="relative rounded-2xl p-5">
+            <div class="relative rounded-2xl p-5" data-aos="fade-right">
                 <img src="assets/nice-and-cannes.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg">
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -208,7 +208,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="relative rounded-2xl p-5">
+            <div class="relative rounded-2xl p-5" data-aos="fade-right">
                 <img src="assets/seville.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg">
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -243,8 +243,8 @@
 
     <!-- about page -->
      <div id="about" class="flex px-24 flex-row justify-between">
-        <img src="assets/about-page.png" class="w-[801.76px] h-auto" alt="">
-        <div class="flex flex-col justify-center items-center mt-36">
+        <img src="assets/about-page.png" class="w-[801.76px] h-auto" alt="" data-aos="fade-up">
+        <div class="flex flex-col justify-center items-center mt-36" data-aos="fade-right">
             <div class="flex flex-col gap-3">
                 <p class="font-poppins font-semibold text-[17.44px] leading-[1.2em] tracking-[0.018em] text-[#F85E9F]">
                     WE ARE THE BEST FOR YOU
@@ -296,7 +296,7 @@
 
      <!-- destination card again -->
      <div id="destinations" class="mt-36 px-24">
-        <div class="flex flex-row justify-between">
+        <div class="flex flex-row justify-between" data-aos="fade-right">
 
             <div class="flex flex-col">
                 <p class="font-poppins font-semibold text-[18px] tracking-[0.018em] leading-[1.2em] text-[#F85E9F] uppercase">
@@ -332,7 +332,7 @@
         <!-- Card Section -->
         <div class="grid grid-cols-3 gap-10 mt-10 bg-white">
             <!-- Card 1 -->
-            <div class="relative rounded-2xl p-5">
+            <div class="relative rounded-2xl p-5" data-aos="fade-up">
                 <img src="assets/tokyo.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg">
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -364,7 +364,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="relative rounded-2xl p-5">
+            <div class="relative rounded-2xl p-5" data-aos="fade-up">
                 <img src="assets/rome.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg">
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -396,7 +396,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="relative rounded-2xl p-5">
+            <div class="relative rounded-2xl p-5" data-aos="fade-up">
                 <img src="assets/barselona.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg">
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -427,7 +427,7 @@
                 </div>
             </div>
             <!-- Card 4 -->
-            <div class="relative rounded-2xl p-5">
+            <div class="relative rounded-2xl p-5" data-aos="fade-up">
                 <img src="assets/bangkok.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg">
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -458,7 +458,7 @@
                 </div>
             </div>
             <!-- Card 5 -->
-            <div class="relative rounded-2xl p-5">
+            <div class="relative rounded-2xl p-5" data-aos="fade-up">
                 <img src="assets/sydney.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg">
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -489,7 +489,7 @@
                 </div>
             </div>
             <!-- Card 6 -->
-            <div class="relative rounded-2xl p-5">
+            <div class="relative rounded-2xl p-5" data-aos="fade-up">
                 <img src="assets/toronto.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg">
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -524,7 +524,7 @@
 
     <!-- Experience -->
     <div class="px-24 flex flex-row justify-between mt-20">
-        <div class="flex flex-col gap-3 mt-20">
+        <div class="flex flex-col gap-3 mt-20" data-aos="fade-right">
             <p class="font-poppins font-semibold text-[17.75px] leading-[19.7px] tracking-[0.018em] text-[#F85E9F]">
                 Our Experience
             </p>
@@ -549,13 +549,13 @@
                 </div>
             </div>
         </div>
-        <div class="absolute right-0 mr-0 w-[800px] overflow-hidden">
+        <div class="absolute right-0 mr-0 w-[800px] overflow-hidden" data-aos="fade-up">
             <img src="assets/banner-experience.png" class="relative h-auto w-auto object-contain" alt="">
         </div>
     </div>
 
     <div class="flex flex-row justify-between mt-36 px-24">
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-3" data-aos="fade-right">
             <p class="font-poppins font-bold text-[40px] leading-[1.3em] tracking-[-0.01em] text-[#0C111F] w-[500px]">
                 Meet Our Expert Tour Guides
             </p>
@@ -582,7 +582,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col items-center justify-center gap-10">
+        <div class="flex flex-col items-center justify-center gap-10" data-aos="fade-right">
             <div class="flex flex-row gap-10">
                 <?php iconLikeExperience(); ?>
                 <div class="flex flex-col">
@@ -622,7 +622,7 @@
     </div>
 
     <!-- newsletter -->
-    <div class="px-24 mt-36 mb-36">
+    <div class="px-24 mt-36 mb-36" data-aos="fade-up">
         <div class="relative bg-[#FACD49] w-full h-[353px] flex flex-col justify-center items-center rounded-[29.59px]">
             <div class="flex flex-col gap-5 justify-center items-center text-center mb-10">
                 <p class="font-poppins font-semibold text-[39.45px] leading-[39.4px] tracking-[0.0015] text-[#2D3134]">
@@ -652,5 +652,17 @@
     
 </body>
 <script src="js/main.js"></script>
-<script src="aos/aos.js"></script>
+<!-- Memuat AOS -->
+<script src="node_modules/aos/dist/aos.js"></script>
+
+<!-- Inisialisasi AOS -->
+<script>
+    AOS.init({
+        offset: 120,  // jarak mulai animasi
+        delay: 0,     // penundaan animasi
+        duration: 1200, // durasi animasi
+        easing: 'ease', // tipe easing
+        // once: true,   // animasi hanya berjalan sekali
+    });
+</script>
 </html>
