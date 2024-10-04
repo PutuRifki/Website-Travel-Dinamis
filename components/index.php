@@ -25,7 +25,7 @@
                 <body>
                     <div class="fixed top-0 left-0 w-full z-50 bg-white/70 px-24 py-6 flex justify-between shadow-md">
                         <div>
-                            <a href="/index.php" class="text-gradient text-[39.4px] leading-[31.56px] font-bold font-poppins">SubudiBaliTour</a>
+                            <a href="./index.php" class="text-gradient text-[39.4px] leading-[31.56px] font-bold font-poppins">SubudiBaliTour</a>
                         </div>
                         <div class="flex flex-row justify-center items-center gap-10">
                             <a href="./index.php#home" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium leading-[0.12em] hover:text-[#191825]/50 active">Home</a>

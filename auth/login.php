@@ -54,7 +54,7 @@
                         </div>
 
                         <div class="w-full flex justify-between items-center">
-                            <button type="submit" class="w-[150px] h-[46px] bg-[#D885A3] font-poppins font-semibold text-[16px] text-[#FFFFFF] rounded-[23px]">Login</button>
+                            <button type="submit" class="w-[150px] h-[46px] bg-[#D885A3] font-poppins font-semibold text-[16px] text-[#FFFFFF] rounded-[23px] transition-transform duration-200 hover:scale-105 cursor-pointer">Login</button>
                             <a href="../index.php" target="">
                                 <button type="button" class="w-[150px] h-[46px] bg-[#D885A3] font-poppins font-semibold text-[16px] text-[#FFFFFF] rounded-[23px]">
                                     Back
