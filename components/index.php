@@ -30,8 +30,8 @@
                         <div class="flex flex-row justify-center items-center gap-10">
                             <a href="./index.php#home" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium leading-[0.12em] hover:text-[#191825]/50 active">Home</a>
                             <a href="./index.php#about" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium leading-[0.12em] hover:text-[#191825]/50">About</a>
-                            <a href="./index.php#destination" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium leading-[0.12em] hover:text-[#191825]/50">Destinations</a>
-                            <a href="#" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium leading-[0.12em] hover:text-[#191825]/50">Contact Us</a>
+                            <a href="./index.php#destinations" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium leading-[0.12em] hover:text-[#191825]/50">Destinations</a>
+                            <a href="./index.php#contact" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium leading-[0.12em] hover:text-[#191825]/50">Contact Us</a>
                         </div>
                         <div class="flex flex-row justify-center items-center gap-10">
                             <a href="./auth/login.php" class="text-white font-poppins font-semibold text-[13.81px] leading-[0.12em]">

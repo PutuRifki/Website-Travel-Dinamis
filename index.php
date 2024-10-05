@@ -11,6 +11,8 @@
     <title>Official Made Subudi Bali Tour</title>
     <link href="src/output.css" rel="stylesheet">
     <link href="node_modules/aos/dist/aos.css" rel="stylesheet" >
+    <script src="https://unpkg.com/flowbite@1.6.4/dist/flowbite.js"></script>
+
     <style>
         .gradient {
             background: linear-gradient(90deg, #F85E9F 0%, #5D50C6 100%);
@@ -45,9 +47,30 @@
                 <div class="rounded-[98.62px] bg-[#5D50C6] w-[143.12px] h-[48.56px] flex justify-center items-center shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105 cursor-pointer">
                     <p class="font-poppins text-[13.81px] font-semibold leading-[1.2em] text-[#EEEEEE]">Get Started</p>
                 </div>
-                <div class="rounded-[98.62px] bg-[#FFFFFF] w-[186.67px] h-[55.23px] flex justify-center items-center hover:bg-[#FFFFFF]/60 border-[#EEEEEE] border-[1px] border-solid  transition-transform duration-200 hover:scale-105 cursor-pointer gap-2">
-                    <?php watchDemo(); ?>
-                    <p class="font-poppins text-[13.81px] leading-[1.2em] font-semibold text-[#222831]">Watch Demo</p>
+                <button data-modal-target="videoModal" data-modal-toggle="videoModal">
+                    <div class="rounded-[98.62px] bg-[#FFFFFF] w-[186.67px] h-[55.23px] flex justify-center items-center hover:bg-[#FFFFFF]/60 border-[#EEEEEE] border-[1px] border-solid  transition-transform duration-200 hover:scale-105 cursor-pointer gap-2">
+                        <?php watchDemo(); ?>
+                        <p class="font-poppins text-[13.81px] leading-[1.2em] font-semibold text-[#222831]">Watch Demo</p>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Modal structure for the video -->
+            <div id="videoModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full px-24">
+                <div class="relative w-full max-w-3xl mx-auto h-auto">
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <div class="flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600">
+                            <h3 class="text-xl font-bold text-gray-900/70 dark:text-white font-poppins">
+                                How to Explorer
+                            </h3>
+                            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer" data-modal-hide="videoModal">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 011.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                        <div class="p-6 space-y-6 flex justify-center items-center">
+                            <iframe class="w-full h-[350px]" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -124,127 +147,296 @@
             </div>
 
             <div class="flex flex-row gap-9">
-
-                <div class="w-[47px] h-[47px] rounded-[98.62px] bg-[#F6F5F5] flex justify-center items-center shadow-md transition-transform duration-200 hover:scale-105 cursor-pointer hover:bg-[#F6F5F5]/50">
-                    <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.67978 17.2354L2.0449 9.60047L9.67978 1.96559" stroke="#5D50C6" stroke-width="2.95852" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                
-                <div class="w-[47px] h-[47px] rounded-[98.62px] bg-[#5D50C6] flex justify-center items-center shadow-md shadow-[#5D50C6]/50 transition-transform duration-200 hover:scale-105 cursor-pointer hover:bg-[#5D50C6]/50">
-                    <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.46567 1.96582L10.1005 9.6007L2.46567 17.2356" stroke="white" stroke-width="2.95852" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
+                <button class="geserKeKiri">
+                    <div class="w-[47px] h-[47px] rounded-[98.62px] bg-[#F6F5F5] flex justify-center items-center shadow-md transition-transform duration-200 hover:scale-105 cursor-pointer hover:bg-[#F6F5F5]/50">
+                        <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.67978 17.2354L2.0449 9.60047L9.67978 1.96559" stroke="#5D50C6" stroke-width="2.95852" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </button>
+                <button class="geserKeKanan">
+                    <div class="w-[47px] h-[47px] rounded-[98.62px] bg-[#5D50C6] flex justify-center items-center shadow-md shadow-[#5D50C6]/50 transition-transform duration-200 hover:scale-105 cursor-pointer hover:bg-[#5D50C6]/50">
+                        <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.46567 1.96582L10.1005 9.6007L2.46567 17.2356" stroke="white" stroke-width="2.95852" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </button>
 
             </div>
 
         </div>
 
         <!-- Card Section -->
-        <div class="flex justify-between gap-10 mt-10 bg-white">
-            <!-- Card 1 -->
-            <div class="relative rounded-2xl p-5" data-aos="fade-right">
-                <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
-                    <img src="assets/cappadocia.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient hover:scale-125 transition-all duration-300">
-                </div>
-                <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
-                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.9595 9.8711C11.7931 10.0324 11.7166 10.2657 11.7545 10.4944L12.3258 13.6561C12.374 13.9241 12.2609 14.1953 12.0367 14.3501C11.8169 14.5108 11.5245 14.5301 11.2848 14.4015L8.43865 12.9171C8.33969 12.8644 8.2298 12.8361 8.11734 12.8329H7.94319C7.88279 12.8419 7.82367 12.8612 7.76969 12.8908L4.9229 14.3823C4.78217 14.4529 4.6228 14.478 4.46665 14.4529C4.08622 14.381 3.83238 14.0185 3.89472 13.6362L4.46665 10.4745C4.50456 10.2438 4.42809 10.0093 4.26165 9.8454L1.94117 7.59624C1.7471 7.40796 1.67962 7.12521 1.7683 6.87009C1.85442 6.61561 2.07419 6.4299 2.33959 6.38813L5.53339 5.9248C5.7763 5.89974 5.98964 5.75194 6.09889 5.53345L7.50622 2.64811C7.53963 2.58385 7.58269 2.52473 7.63474 2.4746L7.69257 2.42962C7.72278 2.3962 7.75748 2.36857 7.79604 2.34608L7.86608 2.32037L7.97533 2.27539H8.24587C8.48749 2.30045 8.70019 2.44504 8.81137 2.66096L10.2373 5.53345C10.3401 5.74358 10.54 5.88946 10.7707 5.9248L13.9645 6.38813C14.2344 6.42668 14.46 6.61304 14.5493 6.87009C14.6335 7.12778 14.5608 7.41053 14.3629 7.59624L11.9595 9.8711Z" fill="#FFCD6B"/>
-                    </svg>
-                    <p class="font-poppins text-[17.35px] leading-[1.8em] tracking-[0.02em] text-[#FFFFFF]">5.0</p>
-                </div>
-
-                <div class="mt-5">
-
-                    <div class="flex flex-col px-5">
-                        <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Cappadocia</p>
+        <div class="card-container overflow-x-hidden">
+            <div  class="flex card-wrapper justify-between gap-10 mt-10 bg-white transition-transform duration-500">
+                <!-- Card 1 -->
+                <div class="relative rounded-2xl p-5" data-aos="fade-right">
+                    <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                        <img src="assets/cappadocia.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient hover:scale-125 transition-all duration-300">
+                    </div>
+                    <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9595 9.8711C11.7931 10.0324 11.7166 10.2657 11.7545 10.4944L12.3258 13.6561C12.374 13.9241 12.2609 14.1953 12.0367 14.3501C11.8169 14.5108 11.5245 14.5301 11.2848 14.4015L8.43865 12.9171C8.33969 12.8644 8.2298 12.8361 8.11734 12.8329H7.94319C7.88279 12.8419 7.82367 12.8612 7.76969 12.8908L4.9229 14.3823C4.78217 14.4529 4.6228 14.478 4.46665 14.4529C4.08622 14.381 3.83238 14.0185 3.89472 13.6362L4.46665 10.4745C4.50456 10.2438 4.42809 10.0093 4.26165 9.8454L1.94117 7.59624C1.7471 7.40796 1.67962 7.12521 1.7683 6.87009C1.85442 6.61561 2.07419 6.4299 2.33959 6.38813L5.53339 5.9248C5.7763 5.89974 5.98964 5.75194 6.09889 5.53345L7.50622 2.64811C7.53963 2.58385 7.58269 2.52473 7.63474 2.4746L7.69257 2.42962C7.72278 2.3962 7.75748 2.36857 7.79604 2.34608L7.86608 2.32037L7.97533 2.27539H8.24587C8.48749 2.30045 8.70019 2.44504 8.81137 2.66096L10.2373 5.53345C10.3401 5.74358 10.54 5.88946 10.7707 5.9248L13.9645 6.38813C14.2344 6.42668 14.46 6.61304 14.5493 6.87009C14.6335 7.12778 14.5608 7.41053 14.3629 7.59624L11.9595 9.8711Z" fill="#FFCD6B"/>
+                        </svg>
+                        <p class="font-poppins text-[17.35px] leading-[1.8em] tracking-[0.02em] text-[#FFFFFF]">5.0</p>
+                    </div>
     
-                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2">Lorem Ipsum is simply dummy text of the printing and...see more</p>
-                    </div>
-
-                    <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
-                        <div class="flex flex-col">
-                            <p class="font-poppins leading-[1.55em] text-[15.42px] tracking-[-0.01em] text-[#0C111F]/60">Machu Picchu, Peru</p>
-                            <P class="font-poppins text-[13.49px] leading-[27px] text-[#0C111F]/30 font-medium">
-                                x 12 interest free
-                            </P>
-                        </div>
-
-                        <a href="#" class="font-poppins text-[13.49px] font-medium leading-[1.8em] tracking-[-0.01em] text-[#FFFFFF] bg-[#7723FE] px-6 py-3 rounded-[43.38px] shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">See More</a>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="relative rounded-2xl p-5" data-aos="fade-right">
-                <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
-                    <img src="assets/nice-and-cannes.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient hover:scale-125 transition-all duration-300">
-                </div>
-                <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
-                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.9595 9.8711C11.7931 10.0324 11.7166 10.2657 11.7545 10.4944L12.3258 13.6561C12.374 13.9241 12.2609 14.1953 12.0367 14.3501C11.8169 14.5108 11.5245 14.5301 11.2848 14.4015L8.43865 12.9171C8.33969 12.8644 8.2298 12.8361 8.11734 12.8329H7.94319C7.88279 12.8419 7.82367 12.8612 7.76969 12.8908L4.9229 14.3823C4.78217 14.4529 4.6228 14.478 4.46665 14.4529C4.08622 14.381 3.83238 14.0185 3.89472 13.6362L4.46665 10.4745C4.50456 10.2438 4.42809 10.0093 4.26165 9.8454L1.94117 7.59624C1.7471 7.40796 1.67962 7.12521 1.7683 6.87009C1.85442 6.61561 2.07419 6.4299 2.33959 6.38813L5.53339 5.9248C5.7763 5.89974 5.98964 5.75194 6.09889 5.53345L7.50622 2.64811C7.53963 2.58385 7.58269 2.52473 7.63474 2.4746L7.69257 2.42962C7.72278 2.3962 7.75748 2.36857 7.79604 2.34608L7.86608 2.32037L7.97533 2.27539H8.24587C8.48749 2.30045 8.70019 2.44504 8.81137 2.66096L10.2373 5.53345C10.3401 5.74358 10.54 5.88946 10.7707 5.9248L13.9645 6.38813C14.2344 6.42668 14.46 6.61304 14.5493 6.87009C14.6335 7.12778 14.5608 7.41053 14.3629 7.59624L11.9595 9.8711Z" fill="#FFCD6B"/>
-                    </svg>
-                    <p class="font-poppins text-[17.35px] leading-[1.8em] tracking-[0.02em] text-[#FFFFFF]">5.0</p>
-                </div>
-
-                <div class="mt-5">
-
-                    <div class="flex flex-col px-5">
-                        <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Nice and Cannes</p>
+                    <div class="mt-5">
     
-                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2">Lorem Ipsum is simply dummy text of the printing and...see more</p>
-                    </div>
-
-                    <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
-                        <div class="flex flex-col">
-                            <p class="font-poppins leading-[1.55em] text-[15.42px] tracking-[-0.01em] text-[#0C111F]/60">French Riviera, France</p>
-                            <P class="font-poppins text-[13.49px] leading-[27px] text-[#0C111F]/30 font-medium">
-                                x 12 interest free
-                            </P>
+                        <div class="flex flex-col px-5">
+                            <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Cappadocia</p>
+        
+                            <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2"
+                            style="
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            "  
+                            >
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sunt, in ipsum quia numquam assumenda repudiandae, eaque delectus, odio explicabo reiciendis eos accusantium quasi provident ipsa debitis molestias alias officia?
+                                Nam iure labore excepturi et esse? Nihil fuga non rem obcaecati quo, doloremque quos pariatur! Quam molestiae aut quas ab numquam, doloribus vero dolorum iure! Ratione sunt rerum nemo accusantium?
+                            </p>
                         </div>
-
-                        <a href="#" class="font-poppins text-[13.49px] font-medium leading-[1.8em] tracking-[-0.01em] text-[#FFFFFF] bg-[#7723FE] px-6 py-3 rounded-[43.38px] shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">See More</a>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="relative rounded-2xl p-5" data-aos="fade-right">
-                <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
-                    <img src="assets/seville.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient hover:scale-125 transition-all duration-300">
-                </div>
-                <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
-                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.9595 9.8711C11.7931 10.0324 11.7166 10.2657 11.7545 10.4944L12.3258 13.6561C12.374 13.9241 12.2609 14.1953 12.0367 14.3501C11.8169 14.5108 11.5245 14.5301 11.2848 14.4015L8.43865 12.9171C8.33969 12.8644 8.2298 12.8361 8.11734 12.8329H7.94319C7.88279 12.8419 7.82367 12.8612 7.76969 12.8908L4.9229 14.3823C4.78217 14.4529 4.6228 14.478 4.46665 14.4529C4.08622 14.381 3.83238 14.0185 3.89472 13.6362L4.46665 10.4745C4.50456 10.2438 4.42809 10.0093 4.26165 9.8454L1.94117 7.59624C1.7471 7.40796 1.67962 7.12521 1.7683 6.87009C1.85442 6.61561 2.07419 6.4299 2.33959 6.38813L5.53339 5.9248C5.7763 5.89974 5.98964 5.75194 6.09889 5.53345L7.50622 2.64811C7.53963 2.58385 7.58269 2.52473 7.63474 2.4746L7.69257 2.42962C7.72278 2.3962 7.75748 2.36857 7.79604 2.34608L7.86608 2.32037L7.97533 2.27539H8.24587C8.48749 2.30045 8.70019 2.44504 8.81137 2.66096L10.2373 5.53345C10.3401 5.74358 10.54 5.88946 10.7707 5.9248L13.9645 6.38813C14.2344 6.42668 14.46 6.61304 14.5493 6.87009C14.6335 7.12778 14.5608 7.41053 14.3629 7.59624L11.9595 9.8711Z" fill="#FFCD6B"/>
-                    </svg>
-                    <p class="font-poppins text-[17.35px] leading-[1.8em] tracking-[0.02em] text-[#FFFFFF]">5.0</p>
-                </div>
-
-                <div class="mt-5">
-
-                    <div class="flex flex-col px-5">
-                        <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Seville</p>
     
-                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2">Lorem Ipsum is simply dummy text of the printing and...see more</p>
-                    </div>
-
-                    <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
-                        <div class="flex flex-col">
-                            <p class="font-poppins leading-[1.55em] text-[15.42px] tracking-[-0.01em] text-[#0C111F]/60">Seville, Spain</p>
-                            <P class="font-poppins text-[13.49px] leading-[27px] text-[#0C111F]/30 font-medium">
-                                x 12 interest free
-                            </P>
+                        <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
+                            <div class="flex flex-col">
+                                <p class="font-poppins leading-[1.55em] text-[15.42px] tracking-[-0.01em] text-[#0C111F]/60">Machu Picchu, Peru</p>
+                                <P class="font-poppins text-[13.49px] leading-[27px] text-[#0C111F]/30 font-medium">
+                                    x 12 interest free
+                                </P>
+                            </div>
+    
+                            <a href="#" class="font-poppins text-[13.49px] font-medium leading-[1.8em] tracking-[-0.01em] text-[#FFFFFF] bg-[#7723FE] px-6 py-3 rounded-[43.38px] shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">See More</a>
                         </div>
-
-                        <a href="#" class="font-poppins text-[13.49px] font-medium leading-[1.8em] tracking-[-0.01em] text-[#FFFFFF] bg-[#7723FE] px-6 py-3 rounded-[43.38px] shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">See More</a>
+    
                     </div>
-
                 </div>
-            </div>
-        </div> 
+    
+                <!-- Card 2 -->
+                <div class="relative rounded-2xl p-5" data-aos="fade-right">
+                    <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                        <img src="assets/nice-and-cannes.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient hover:scale-125 transition-all duration-300">
+                    </div>
+                    <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9595 9.8711C11.7931 10.0324 11.7166 10.2657 11.7545 10.4944L12.3258 13.6561C12.374 13.9241 12.2609 14.1953 12.0367 14.3501C11.8169 14.5108 11.5245 14.5301 11.2848 14.4015L8.43865 12.9171C8.33969 12.8644 8.2298 12.8361 8.11734 12.8329H7.94319C7.88279 12.8419 7.82367 12.8612 7.76969 12.8908L4.9229 14.3823C4.78217 14.4529 4.6228 14.478 4.46665 14.4529C4.08622 14.381 3.83238 14.0185 3.89472 13.6362L4.46665 10.4745C4.50456 10.2438 4.42809 10.0093 4.26165 9.8454L1.94117 7.59624C1.7471 7.40796 1.67962 7.12521 1.7683 6.87009C1.85442 6.61561 2.07419 6.4299 2.33959 6.38813L5.53339 5.9248C5.7763 5.89974 5.98964 5.75194 6.09889 5.53345L7.50622 2.64811C7.53963 2.58385 7.58269 2.52473 7.63474 2.4746L7.69257 2.42962C7.72278 2.3962 7.75748 2.36857 7.79604 2.34608L7.86608 2.32037L7.97533 2.27539H8.24587C8.48749 2.30045 8.70019 2.44504 8.81137 2.66096L10.2373 5.53345C10.3401 5.74358 10.54 5.88946 10.7707 5.9248L13.9645 6.38813C14.2344 6.42668 14.46 6.61304 14.5493 6.87009C14.6335 7.12778 14.5608 7.41053 14.3629 7.59624L11.9595 9.8711Z" fill="#FFCD6B"/>
+                        </svg>
+                        <p class="font-poppins text-[17.35px] leading-[1.8em] tracking-[0.02em] text-[#FFFFFF]">5.0</p>
+                    </div>
+    
+                    <div class="mt-5">
+    
+                        <div class="flex flex-col px-5">
+                            <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Nice and Cannes</p>
+        
+                            <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2"
+                            style="
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            "
+                            >
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sunt, in ipsum quia numquam assumenda repudiandae, eaque delectus, odio explicabo reiciendis eos accusantium quasi provident ipsa debitis molestias alias officia?
+                                Nam iure labore excepturi et esse? Nihil fuga non rem obcaecati quo, doloremque quos pariatur! Quam molestiae aut quas ab numquam, doloribus vero dolorum iure! Ratione sunt rerum nemo accusantium?
+                            </p>
+                        </div>
+    
+                        <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
+                            <div class="flex flex-col">
+                                <p class="font-poppins leading-[1.55em] text-[15.42px] tracking-[-0.01em] text-[#0C111F]/60">French Riviera, France</p>
+                                <P class="font-poppins text-[13.49px] leading-[27px] text-[#0C111F]/30 font-medium">
+                                    x 12 interest free
+                                </P>
+                            </div>
+    
+                            <a href="#" class="font-poppins text-[13.49px] font-medium leading-[1.8em] tracking-[-0.01em] text-[#FFFFFF] bg-[#7723FE] px-6 py-3 rounded-[43.38px] shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">See More</a>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="relative rounded-2xl p-5" data-aos="fade-right">
+                    <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                        <img src="assets/seville.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient hover:scale-125 transition-all duration-300">
+                    </div>
+                    <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9595 9.8711C11.7931 10.0324 11.7166 10.2657 11.7545 10.4944L12.3258 13.6561C12.374 13.9241 12.2609 14.1953 12.0367 14.3501C11.8169 14.5108 11.5245 14.5301 11.2848 14.4015L8.43865 12.9171C8.33969 12.8644 8.2298 12.8361 8.11734 12.8329H7.94319C7.88279 12.8419 7.82367 12.8612 7.76969 12.8908L4.9229 14.3823C4.78217 14.4529 4.6228 14.478 4.46665 14.4529C4.08622 14.381 3.83238 14.0185 3.89472 13.6362L4.46665 10.4745C4.50456 10.2438 4.42809 10.0093 4.26165 9.8454L1.94117 7.59624C1.7471 7.40796 1.67962 7.12521 1.7683 6.87009C1.85442 6.61561 2.07419 6.4299 2.33959 6.38813L5.53339 5.9248C5.7763 5.89974 5.98964 5.75194 6.09889 5.53345L7.50622 2.64811C7.53963 2.58385 7.58269 2.52473 7.63474 2.4746L7.69257 2.42962C7.72278 2.3962 7.75748 2.36857 7.79604 2.34608L7.86608 2.32037L7.97533 2.27539H8.24587C8.48749 2.30045 8.70019 2.44504 8.81137 2.66096L10.2373 5.53345C10.3401 5.74358 10.54 5.88946 10.7707 5.9248L13.9645 6.38813C14.2344 6.42668 14.46 6.61304 14.5493 6.87009C14.6335 7.12778 14.5608 7.41053 14.3629 7.59624L11.9595 9.8711Z" fill="#FFCD6B"/>
+                        </svg>
+                        <p class="font-poppins text-[17.35px] leading-[1.8em] tracking-[0.02em] text-[#FFFFFF]">5.0</p>
+                    </div>
+    
+                    <div class="mt-5">
+    
+                        <div class="flex flex-col px-5">
+                            <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Seville</p>
+        
+                            <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2"
+                            style="
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            "
+                            >
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sunt, in ipsum quia numquam assumenda repudiandae, eaque delectus, odio explicabo reiciendis eos accusantium quasi provident ipsa debitis molestias alias officia?
+                                Nam iure labore excepturi et esse? Nihil fuga non rem obcaecati quo, doloremque quos pariatur! Quam molestiae aut quas ab numquam, doloribus vero dolorum iure! Ratione sunt rerum nemo accusantium?
+                            </p>
+                        </div>
+    
+                        <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
+                            <div class="flex flex-col">
+                                <p class="font-poppins leading-[1.55em] text-[15.42px] tracking-[-0.01em] text-[#0C111F]/60">Seville, Spain</p>
+                                <P class="font-poppins text-[13.49px] leading-[27px] text-[#0C111F]/30 font-medium">
+                                    x 12 interest free
+                                </P>
+                            </div>
+    
+                            <a href="#" class="font-poppins text-[13.49px] font-medium leading-[1.8em] tracking-[-0.01em] text-[#FFFFFF] bg-[#7723FE] px-6 py-3 rounded-[43.38px] shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">See More</a>
+                        </div>
+    
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="relative rounded-2xl p-5" data-aos="fade-right">
+                    <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                        <img src="assets/seville.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient hover:scale-125 transition-all duration-300">
+                    </div>
+                    <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9595 9.8711C11.7931 10.0324 11.7166 10.2657 11.7545 10.4944L12.3258 13.6561C12.374 13.9241 12.2609 14.1953 12.0367 14.3501C11.8169 14.5108 11.5245 14.5301 11.2848 14.4015L8.43865 12.9171C8.33969 12.8644 8.2298 12.8361 8.11734 12.8329H7.94319C7.88279 12.8419 7.82367 12.8612 7.76969 12.8908L4.9229 14.3823C4.78217 14.4529 4.6228 14.478 4.46665 14.4529C4.08622 14.381 3.83238 14.0185 3.89472 13.6362L4.46665 10.4745C4.50456 10.2438 4.42809 10.0093 4.26165 9.8454L1.94117 7.59624C1.7471 7.40796 1.67962 7.12521 1.7683 6.87009C1.85442 6.61561 2.07419 6.4299 2.33959 6.38813L5.53339 5.9248C5.7763 5.89974 5.98964 5.75194 6.09889 5.53345L7.50622 2.64811C7.53963 2.58385 7.58269 2.52473 7.63474 2.4746L7.69257 2.42962C7.72278 2.3962 7.75748 2.36857 7.79604 2.34608L7.86608 2.32037L7.97533 2.27539H8.24587C8.48749 2.30045 8.70019 2.44504 8.81137 2.66096L10.2373 5.53345C10.3401 5.74358 10.54 5.88946 10.7707 5.9248L13.9645 6.38813C14.2344 6.42668 14.46 6.61304 14.5493 6.87009C14.6335 7.12778 14.5608 7.41053 14.3629 7.59624L11.9595 9.8711Z" fill="#FFCD6B"/>
+                        </svg>
+                        <p class="font-poppins text-[17.35px] leading-[1.8em] tracking-[0.02em] text-[#FFFFFF]">5.0</p>
+                    </div>
+    
+                    <div class="mt-5">
+    
+                        <div class="flex flex-col px-5">
+                            <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Seville</p>
+        
+                            <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2"
+                            style="
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            "
+                            >
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sunt, in ipsum quia numquam assumenda repudiandae, eaque delectus, odio explicabo reiciendis eos accusantium quasi provident ipsa debitis molestias alias officia?
+                                Nam iure labore excepturi et esse? Nihil fuga non rem obcaecati quo, doloremque quos pariatur! Quam molestiae aut quas ab numquam, doloribus vero dolorum iure! Ratione sunt rerum nemo accusantium?
+                            </p>
+                        </div>
+    
+                        <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
+                            <div class="flex flex-col">
+                                <p class="font-poppins leading-[1.55em] text-[15.42px] tracking-[-0.01em] text-[#0C111F]/60">Seville, Spain</p>
+                                <P class="font-poppins text-[13.49px] leading-[27px] text-[#0C111F]/30 font-medium">
+                                    x 12 interest free
+                                </P>
+                            </div>
+    
+                            <a href="#" class="font-poppins text-[13.49px] font-medium leading-[1.8em] tracking-[-0.01em] text-[#FFFFFF] bg-[#7723FE] px-6 py-3 rounded-[43.38px] shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">See More</a>
+                        </div>
+    
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="relative rounded-2xl p-5" data-aos="fade-right">
+                    <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                        <img src="assets/seville.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient hover:scale-125 transition-all duration-300">
+                    </div>
+                    <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9595 9.8711C11.7931 10.0324 11.7166 10.2657 11.7545 10.4944L12.3258 13.6561C12.374 13.9241 12.2609 14.1953 12.0367 14.3501C11.8169 14.5108 11.5245 14.5301 11.2848 14.4015L8.43865 12.9171C8.33969 12.8644 8.2298 12.8361 8.11734 12.8329H7.94319C7.88279 12.8419 7.82367 12.8612 7.76969 12.8908L4.9229 14.3823C4.78217 14.4529 4.6228 14.478 4.46665 14.4529C4.08622 14.381 3.83238 14.0185 3.89472 13.6362L4.46665 10.4745C4.50456 10.2438 4.42809 10.0093 4.26165 9.8454L1.94117 7.59624C1.7471 7.40796 1.67962 7.12521 1.7683 6.87009C1.85442 6.61561 2.07419 6.4299 2.33959 6.38813L5.53339 5.9248C5.7763 5.89974 5.98964 5.75194 6.09889 5.53345L7.50622 2.64811C7.53963 2.58385 7.58269 2.52473 7.63474 2.4746L7.69257 2.42962C7.72278 2.3962 7.75748 2.36857 7.79604 2.34608L7.86608 2.32037L7.97533 2.27539H8.24587C8.48749 2.30045 8.70019 2.44504 8.81137 2.66096L10.2373 5.53345C10.3401 5.74358 10.54 5.88946 10.7707 5.9248L13.9645 6.38813C14.2344 6.42668 14.46 6.61304 14.5493 6.87009C14.6335 7.12778 14.5608 7.41053 14.3629 7.59624L11.9595 9.8711Z" fill="#FFCD6B"/>
+                        </svg>
+                        <p class="font-poppins text-[17.35px] leading-[1.8em] tracking-[0.02em] text-[#FFFFFF]">5.0</p>
+                    </div>
+    
+                    <div class="mt-5">
+    
+                        <div class="flex flex-col px-5">
+                            <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Seville</p>
+        
+                            <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2"
+                            style="
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            "
+                            >
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sunt, in ipsum quia numquam assumenda repudiandae, eaque delectus, odio explicabo reiciendis eos accusantium quasi provident ipsa debitis molestias alias officia?
+                                Nam iure labore excepturi et esse? Nihil fuga non rem obcaecati quo, doloremque quos pariatur! Quam molestiae aut quas ab numquam, doloribus vero dolorum iure! Ratione sunt rerum nemo accusantium?
+                            </p>
+                        </div>
+    
+                        <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
+                            <div class="flex flex-col">
+                                <p class="font-poppins leading-[1.55em] text-[15.42px] tracking-[-0.01em] text-[#0C111F]/60">Seville, Spain</p>
+                                <P class="font-poppins text-[13.49px] leading-[27px] text-[#0C111F]/30 font-medium">
+                                    x 12 interest free
+                                </P>
+                            </div>
+    
+                            <a href="#" class="font-poppins text-[13.49px] font-medium leading-[1.8em] tracking-[-0.01em] text-[#FFFFFF] bg-[#7723FE] px-6 py-3 rounded-[43.38px] shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">See More</a>
+                        </div>
+    
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="relative rounded-2xl p-5" data-aos="fade-right">
+                    <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                        <img src="assets/seville.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient hover:scale-125 transition-all duration-300">
+                    </div>
+                    <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9595 9.8711C11.7931 10.0324 11.7166 10.2657 11.7545 10.4944L12.3258 13.6561C12.374 13.9241 12.2609 14.1953 12.0367 14.3501C11.8169 14.5108 11.5245 14.5301 11.2848 14.4015L8.43865 12.9171C8.33969 12.8644 8.2298 12.8361 8.11734 12.8329H7.94319C7.88279 12.8419 7.82367 12.8612 7.76969 12.8908L4.9229 14.3823C4.78217 14.4529 4.6228 14.478 4.46665 14.4529C4.08622 14.381 3.83238 14.0185 3.89472 13.6362L4.46665 10.4745C4.50456 10.2438 4.42809 10.0093 4.26165 9.8454L1.94117 7.59624C1.7471 7.40796 1.67962 7.12521 1.7683 6.87009C1.85442 6.61561 2.07419 6.4299 2.33959 6.38813L5.53339 5.9248C5.7763 5.89974 5.98964 5.75194 6.09889 5.53345L7.50622 2.64811C7.53963 2.58385 7.58269 2.52473 7.63474 2.4746L7.69257 2.42962C7.72278 2.3962 7.75748 2.36857 7.79604 2.34608L7.86608 2.32037L7.97533 2.27539H8.24587C8.48749 2.30045 8.70019 2.44504 8.81137 2.66096L10.2373 5.53345C10.3401 5.74358 10.54 5.88946 10.7707 5.9248L13.9645 6.38813C14.2344 6.42668 14.46 6.61304 14.5493 6.87009C14.6335 7.12778 14.5608 7.41053 14.3629 7.59624L11.9595 9.8711Z" fill="#FFCD6B"/>
+                        </svg>
+                        <p class="font-poppins text-[17.35px] leading-[1.8em] tracking-[0.02em] text-[#FFFFFF]">5.0</p>
+                    </div>
+    
+                    <div class="mt-5">
+    
+                        <div class="flex flex-col px-5">
+                            <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Seville</p>
+        
+                            <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2"
+                            style="
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            "
+                            >
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sunt, in ipsum quia numquam assumenda repudiandae, eaque delectus, odio explicabo reiciendis eos accusantium quasi provident ipsa debitis molestias alias officia?
+                                Nam iure labore excepturi et esse? Nihil fuga non rem obcaecati quo, doloremque quos pariatur! Quam molestiae aut quas ab numquam, doloribus vero dolorum iure! Ratione sunt rerum nemo accusantium?
+                            </p>
+                        </div>
+    
+                        <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
+                            <div class="flex flex-col">
+                                <p class="font-poppins leading-[1.55em] text-[15.42px] tracking-[-0.01em] text-[#0C111F]/60">Seville, Spain</p>
+                                <P class="font-poppins text-[13.49px] leading-[27px] text-[#0C111F]/30 font-medium">
+                                    x 12 interest free
+                                </P>
+                            </div>
+    
+                            <a href="#" class="font-poppins text-[13.49px] font-medium leading-[1.8em] tracking-[-0.01em] text-[#FFFFFF] bg-[#7723FE] px-6 py-3 rounded-[43.38px] shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">See More</a>
+                        </div>
+    
+                    </div>
+                </div>
+            </div> 
+        </div>
     </div>
 
     <!-- about page -->
@@ -301,7 +493,7 @@
      </div>
 
      <!-- destination card again -->
-     <div id="destinations" class="mt-36 px-24">
+     <div id="destinations" class="mt-36 px-24" id="destinations">
         <div class="flex flex-row justify-between" data-aos="fade-right">
 
             <div class="flex flex-col">
@@ -340,7 +532,7 @@
             <!-- Card 1 -->
             <div class="relative rounded-2xl p-5" data-aos="fade-up">
                 <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
-                    <img src="assets/tokyo.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
+                    <img src="assets/tokyo.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
                 </div>
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -354,7 +546,21 @@
                     <div class="flex flex-col px-5">
                         <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Tokyo</p>
     
-                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2">Lorem Ipsum is simply dummy text of the printing and...see more</p>
+                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2"
+                        style="
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        " 
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis mollitia inventore excepturi, aperiam suscipit incidunt minima error tempora ipsa ut facere, animi assumenda vero quidem, voluptates quam possimus eligendi quae.
+                            Consectetur deleniti totam tempora cum reiciendis autem reprehenderit iusto dolores quidem, tenetur beatae dolorem, doloribus harum atque voluptatum sunt aut. Repellendus voluptatibus maiores reiciendis accusantium dolorum quae molestiae voluptates eligendi?
+                            Fuga ullam quas voluptatibus inventore odit nihil vero provident rerum quos deserunt maiores a animi, voluptas explicabo quis? Enim quidem obcaecati placeat dolorum, nam vitae quaerat natus corrupti atque rem.
+                            Velit necessitatibus quae itaque sapiente ullam quos maxime distinctio consectetur quod dicta nobis officia sit corporis non, quibusdam rerum quisquam. Porro tempora atque sit voluptas fugit quod fuga omnis eveniet?
+                            Explicabo doloremque eaque a quod cum. Ducimus facilis ex numquam laboriosam, et saepe, dolores impedit, odit aspernatur dolorem ut perspiciatis consequuntur vero nemo laudantium ea qui atque labore cumque natus.
+                        </p>
                     </div>
 
                     <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
@@ -374,7 +580,7 @@
             <!-- Card 2 -->
             <div class="relative rounded-2xl p-5" data-aos="fade-up">
                 <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
-                    <img src="assets/rome.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
+                    <img src="assets/rome.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
                 </div>
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -388,7 +594,21 @@
                     <div class="flex flex-col px-5">
                         <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Rome</p>
     
-                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2">Lorem Ipsum is simply dummy text of the printing and...see more</p>
+                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2"
+                        style="
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        " 
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis mollitia inventore excepturi, aperiam suscipit incidunt minima error tempora ipsa ut facere, animi assumenda vero quidem, voluptates quam possimus eligendi quae.
+                            Consectetur deleniti totam tempora cum reiciendis autem reprehenderit iusto dolores quidem, tenetur beatae dolorem, doloribus harum atque voluptatum sunt aut. Repellendus voluptatibus maiores reiciendis accusantium dolorum quae molestiae voluptates eligendi?
+                            Fuga ullam quas voluptatibus inventore odit nihil vero provident rerum quos deserunt maiores a animi, voluptas explicabo quis? Enim quidem obcaecati placeat dolorum, nam vitae quaerat natus corrupti atque rem.
+                            Velit necessitatibus quae itaque sapiente ullam quos maxime distinctio consectetur quod dicta nobis officia sit corporis non, quibusdam rerum quisquam. Porro tempora atque sit voluptas fugit quod fuga omnis eveniet?
+                            Explicabo doloremque eaque a quod cum. Ducimus facilis ex numquam laboriosam, et saepe, dolores impedit, odit aspernatur dolorem ut perspiciatis consequuntur vero nemo laudantium ea qui atque labore cumque natus.
+                        </p>
                     </div>
 
                     <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
@@ -408,7 +628,7 @@
             <!-- Card 3 -->
             <div class="relative rounded-2xl p-5" data-aos="fade-up">
                 <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
-                    <img src="assets/barselona.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
+                    <img src="assets/barselona.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
                 </div>
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -422,7 +642,21 @@
                     <div class="flex flex-col px-5">
                         <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Barcelona</p>
     
-                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2">Lorem Ipsum is simply dummy text of the printing and...see more</p>
+                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2"
+                        style="
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        " 
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis mollitia inventore excepturi, aperiam suscipit incidunt minima error tempora ipsa ut facere, animi assumenda vero quidem, voluptates quam possimus eligendi quae.
+                            Consectetur deleniti totam tempora cum reiciendis autem reprehenderit iusto dolores quidem, tenetur beatae dolorem, doloribus harum atque voluptatum sunt aut. Repellendus voluptatibus maiores reiciendis accusantium dolorum quae molestiae voluptates eligendi?
+                            Fuga ullam quas voluptatibus inventore odit nihil vero provident rerum quos deserunt maiores a animi, voluptas explicabo quis? Enim quidem obcaecati placeat dolorum, nam vitae quaerat natus corrupti atque rem.
+                            Velit necessitatibus quae itaque sapiente ullam quos maxime distinctio consectetur quod dicta nobis officia sit corporis non, quibusdam rerum quisquam. Porro tempora atque sit voluptas fugit quod fuga omnis eveniet?
+                            Explicabo doloremque eaque a quod cum. Ducimus facilis ex numquam laboriosam, et saepe, dolores impedit, odit aspernatur dolorem ut perspiciatis consequuntur vero nemo laudantium ea qui atque labore cumque natus.
+                        </p>
                     </div>
 
                     <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
@@ -441,7 +675,7 @@
             <!-- Card 4 -->
             <div class="relative rounded-2xl p-5" data-aos="fade-up">
                 <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
-                    <img src="assets/bangkok.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
+                    <img src="assets/bangkok.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
                 </div>
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -455,7 +689,21 @@
                     <div class="flex flex-col px-5">
                         <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Bangkok</p>
     
-                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2">Lorem Ipsum is simply dummy text of the printing and...see more</p>
+                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2"
+                        style="
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        " 
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis mollitia inventore excepturi, aperiam suscipit incidunt minima error tempora ipsa ut facere, animi assumenda vero quidem, voluptates quam possimus eligendi quae.
+                            Consectetur deleniti totam tempora cum reiciendis autem reprehenderit iusto dolores quidem, tenetur beatae dolorem, doloribus harum atque voluptatum sunt aut. Repellendus voluptatibus maiores reiciendis accusantium dolorum quae molestiae voluptates eligendi?
+                            Fuga ullam quas voluptatibus inventore odit nihil vero provident rerum quos deserunt maiores a animi, voluptas explicabo quis? Enim quidem obcaecati placeat dolorum, nam vitae quaerat natus corrupti atque rem.
+                            Velit necessitatibus quae itaque sapiente ullam quos maxime distinctio consectetur quod dicta nobis officia sit corporis non, quibusdam rerum quisquam. Porro tempora atque sit voluptas fugit quod fuga omnis eveniet?
+                            Explicabo doloremque eaque a quod cum. Ducimus facilis ex numquam laboriosam, et saepe, dolores impedit, odit aspernatur dolorem ut perspiciatis consequuntur vero nemo laudantium ea qui atque labore cumque natus.
+                        </p>
                     </div>
 
                     <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
@@ -474,7 +722,7 @@
             <!-- Card 5 -->
             <div class="relative rounded-2xl p-5" data-aos="fade-up">
                 <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
-                    <img src="assets/sydney.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
+                    <img src="assets/sydney.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
                 </div>
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -488,7 +736,21 @@
                     <div class="flex flex-col px-5">
                         <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Sydney</p>
     
-                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2">Lorem Ipsum is simply dummy text of the printing and...see more</p>
+                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2"
+                        style="
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        " 
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis mollitia inventore excepturi, aperiam suscipit incidunt minima error tempora ipsa ut facere, animi assumenda vero quidem, voluptates quam possimus eligendi quae.
+                            Consectetur deleniti totam tempora cum reiciendis autem reprehenderit iusto dolores quidem, tenetur beatae dolorem, doloribus harum atque voluptatum sunt aut. Repellendus voluptatibus maiores reiciendis accusantium dolorum quae molestiae voluptates eligendi?
+                            Fuga ullam quas voluptatibus inventore odit nihil vero provident rerum quos deserunt maiores a animi, voluptas explicabo quis? Enim quidem obcaecati placeat dolorum, nam vitae quaerat natus corrupti atque rem.
+                            Velit necessitatibus quae itaque sapiente ullam quos maxime distinctio consectetur quod dicta nobis officia sit corporis non, quibusdam rerum quisquam. Porro tempora atque sit voluptas fugit quod fuga omnis eveniet?
+                            Explicabo doloremque eaque a quod cum. Ducimus facilis ex numquam laboriosam, et saepe, dolores impedit, odit aspernatur dolorem ut perspiciatis consequuntur vero nemo laudantium ea qui atque labore cumque natus.
+                        </p>
                     </div>
 
                     <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
@@ -507,7 +769,7 @@
             <!-- Card 6 -->
             <div class="relative rounded-2xl p-5" data-aos="fade-up">
                 <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
-                    <img src="assets/toronto.png" alt="Cappadocia" class="w-auto h-auto object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
+                    <img src="assets/toronto.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
                 </div>
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -521,7 +783,21 @@
                     <div class="flex flex-col px-5">
                         <p class="font-poppins font-bold text-[23.13px] text-[#0C111F] leading-[27px]">Toronto</p>
     
-                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2">Lorem Ipsum is simply dummy text of the printing and...see more</p>
+                        <p class="font-poppins text-[15.42px] text-[#0C111F]/60 mt-2"
+                        style="
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        " 
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis mollitia inventore excepturi, aperiam suscipit incidunt minima error tempora ipsa ut facere, animi assumenda vero quidem, voluptates quam possimus eligendi quae.
+                            Consectetur deleniti totam tempora cum reiciendis autem reprehenderit iusto dolores quidem, tenetur beatae dolorem, doloribus harum atque voluptatum sunt aut. Repellendus voluptatibus maiores reiciendis accusantium dolorum quae molestiae voluptates eligendi?
+                            Fuga ullam quas voluptatibus inventore odit nihil vero provident rerum quos deserunt maiores a animi, voluptas explicabo quis? Enim quidem obcaecati placeat dolorum, nam vitae quaerat natus corrupti atque rem.
+                            Velit necessitatibus quae itaque sapiente ullam quos maxime distinctio consectetur quod dicta nobis officia sit corporis non, quibusdam rerum quisquam. Porro tempora atque sit voluptas fugit quod fuga omnis eveniet?
+                            Explicabo doloremque eaque a quod cum. Ducimus facilis ex numquam laboriosam, et saepe, dolores impedit, odit aspernatur dolorem ut perspiciatis consequuntur vero nemo laudantium ea qui atque labore cumque natus.
+                        </p>
                     </div>
 
                     <div class="w-full h-auto mt-5 flex justify-between items-center rounded-b-[29px] bg-[#F6F5F5] px-5 py-5">
@@ -582,11 +858,13 @@
             </p>
 
             <div class="relative w-[510.84px] flex flex-row gap-3">
-                <img src="assets/brazil.png" class="h-auto w-auto object-contain" alt="">
+                <div class="w-[510.84px] h-[296.84px] rounded-[29.59px] overflow-hidden">
+                    <img src="assets/healing-di-kebun-raya-bedugul.jpg" class="h-full w-auto hover:scale-125 transition-all duration-300" alt="">
+                </div>
                 <div class="absolute left-4 top-5 rounded-[98.62px] bg-[#404040]/25 px-5 py-3 flex flex-row gap-3 justify-center items-center">
                     <?php location(); ?>
                     <p class="font-inter font-medium text-[17.75px] leading-[1.8em] tracking-[0.02em] text-[#FFFFFF]">
-                        Gramado, Brazil
+                        Bedugul, Tabanan
                     </p>
                 </div>
                 <div class="absolute top-36 left-0">
@@ -640,15 +918,14 @@
     </div>
 
     <!-- newsletter -->
-    <div class="px-24 mt-36 mb-36" data-aos="fade-up">
+    <div class="px-24 mt-36 mb-36" data-aos="fade-up" id="contact">
         <div class="relative bg-[#FACD49] w-full h-[353px] flex flex-col justify-center items-center rounded-[29.59px]">
             <div class="flex flex-col gap-5 justify-center items-center text-center mb-10">
                 <p class="font-poppins font-semibold text-[39.45px] leading-[39.4px] tracking-[0.0015] text-[#2D3134]">
                     Sign up to our newsletter
                 </p>
                 <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 w-[400px]">
-                    Lorem ipsum dolor sit amet consectetur. Egestas et feugiat purus enim facilisi nunc blandit nullam.
-                </p>
+                    Stay updated with our latest news and offers. Join our newsletter now!                </p>
             </div>
             <div class="flex items-center bg-white rounded-[11.83px] shadow-lg p-2 w-[443.78px] h-[59.17px]">
                 <input type="email" placeholder="Enter Your email address" class="w-full py-2 px-4 font-poppins text-[13.81px] leading-[13.8px] text-[#5B5F62] focus:outline-none rounded-full">

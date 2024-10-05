@@ -4,8 +4,10 @@ module.exports = {
     './src/**/*.{html,js,php}',
     './components/**/*.{html,js,php}',
     './auth/**/*.{html,js,php}', // tambahkan folder lain jika diperlukan
+    './admin/**/*.{html,js,php}', // tambahkan folder lain jika diperlukan
     './index.php',
     './detail-card-wisata.php',
+    
   ],
   safelist: [
     'bg-gradient-to-r',
