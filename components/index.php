@@ -23,26 +23,60 @@
                         </style>
                     </head>
                 <body>
-                    <div class="fixed top-0 left-0 w-full z-50 bg-white/70 px-24 py-6 flex justify-between shadow-md">
+                    <div class="fixed top-0 left-0 w-full z-50 bg-white/70 px-6 md:px-24 py-6 flex justify-between items-center shadow-md">
+                        <!-- Logo -->
                         <div>
-                            <a href="./index.php" class="text-gradient text-[39.4px] leading-[31.56px] font-bold font-poppins">SubudiBaliTour</a>
+                            <a href="./index.php" class="text-gradient text-[32px] md:text-[39.4px] leading-[31.56px] font-bold font-poppins">
+                                SubudiBaliTour
+                            </a>
                         </div>
-                        <div class="flex flex-row justify-center items-center gap-10">
+
+                        <!-- Mobile Menu Toggle (Hamburger) -->
+                        <div class="md:hidden flex items-center">
+                            <button id="menu-toggle" class="text-[#191825] focus:outline-none">
+                                <svg id="menu-icon" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <!-- Default Hamburger Icon -->
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Navigation Links (Desktop) -->
+                        <div id="nav-links" class="hidden md:flex flex-row justify-center items-center gap-10">
                             <a href="./index.php#home" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium leading-[0.12em] hover:text-[#191825]/50 active">Home</a>
                             <a href="./index.php#about" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium leading-[0.12em] hover:text-[#191825]/50">About</a>
                             <a href="./index.php#destinations" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium leading-[0.12em] hover:text-[#191825]/50">Destinations</a>
                             <a href="./index.php#contact" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium leading-[0.12em] hover:text-[#191825]/50">Contact Us</a>
                         </div>
-                        <div class="flex flex-row justify-center items-center gap-10">
+
+                        <!-- Login Button (Desktop) -->
+                        <div class="hidden md:flex flex-row justify-center items-center gap-10">
                             <a href="./auth/login.php" class="text-white font-poppins font-semibold text-[13.81px] leading-[0.12em]">
                                 <div class="bg-[#5D50C6] w-[117.12px] h-[48.56px] rounded-[98.62px] flex justify-center items-center shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">
                                     Login
                                 </div>
                             </a>
                         </div>
+
+                        <!-- Mobile Navigation (Dropdown) -->
+                        <div id="mobile-nav" class="absolute top-full left-0 w-full bg-white shadow-md hidden md:hidden">
+                            <div class="flex flex-col items-center gap-6 py-4">
+                                <a href="./index.php#home" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium hover:text-[#191825]/50">Home</a>
+                                <a href="./index.php#about" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium hover:text-[#191825]/50">About</a>
+                                <a href="./index.php#destinations" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium hover:text-[#191825]/50">Destinations</a>
+                                <a href="./index.php#contact" class="nav-link font-poppins text-[16px] text-[#191825]/75 font-medium hover:text-[#191825]/50">Contact Us</a>
+                                <a href="./auth/login.php" class="text-white font-poppins font-semibold text-[13.81px]">
+                                    <div class="bg-[#5D50C6] w-[117.12px] h-[48.56px] rounded-[98.62px] flex justify-center items-center shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105">
+                                        Login
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+
                 </body>
                 <script>
+                    // fungsi untuk auto link 
                     function setupLinks() {
                         const links = document.querySelectorAll('.nav-link');
 
@@ -62,6 +96,34 @@
 
                     // Panggil fungsi setupLinks setelah DOM sepenuhnya dimuat
                     document.addEventListener('DOMContentLoaded', setupLinks);
+                    
+
+                    // script java script untuk tampilan mobile 
+                    const menuToggle = document.getElementById('menu-toggle');
+                    const mobileNav = document.getElementById('mobile-nav');
+                    const menuIcon = document.getElementById('menu-icon');
+
+                    let isMenuOpen = false;
+
+                    menuToggle.addEventListener('click', () => {
+                        // Toggle mobile navigation visibility
+                        mobileNav.classList.toggle('hidden');
+
+                        // Toggle hamburger to cross icon
+                        if (isMenuOpen) {
+                            // Change to hamburger icon
+                            menuIcon.innerHTML = `
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            `;
+                        } else {
+                            // Change to cross icon
+                            menuIcon.innerHTML = `
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            `;
+                        }
+                        isMenuOpen = !isMenuOpen;
+                    });
+
                 </script>
             </html>
         <?php
@@ -69,9 +131,9 @@
 
     function footer(){
         ?>
-            <div class="px-24 flex flex-col">
-                <div class="flex justify-between flex-row mb-20">
-                    <div class="flex flex-col gap-5">
+            <div class="md:px-24 px-6 flex flex-col">
+                <div class="flex justify-between md:flex-row flex-col mb-20">
+                    <div class="flex flex-col gap-5 md:mb-0 mb-10">
                         <p class="text-gradient text-[31.56px] leading-[39.4px] font-poppins font-bold">
                             MadeSubudiBaliTour
                         </p>
@@ -86,7 +148,7 @@
                             <?php iconYoutube();?>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-5 md:mb-0 mb-10">
                         <p class="font-poppins font-semibold text-[19.72px] leading-[21.7px] text-[#170F49] mb-5">
                             Product
                         </p>
@@ -106,7 +168,7 @@
                             Updates
                         </p>
                     </div>
-                    <div class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-5 md:mb-0 mb-10">
                         <p class="font-poppins font-semibold text-[19.72px] leading-[21.7px] text-[#170F49] mb-5">
                             Company
                         </p>
@@ -126,7 +188,7 @@
                             Blog
                         </p>
                     </div>
-                    <div class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-5 md:mb-0 mb-10">
                         <p class="font-poppins font-semibold text-[19.72px] leading-[21.7px] text-[#170F49] mb-5">
                             Support
                         </p>
@@ -146,7 +208,7 @@
                             Chat support 
                         </p>
                     </div>
-                    <div class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-5 md:mb-0 mb-10">
                         <p class="font-poppins font-semibold text-[19.72px] leading-[21.7px] text-[#170F49] mb-5">
                             Contact Us
                         </p>

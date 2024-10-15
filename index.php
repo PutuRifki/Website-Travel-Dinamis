@@ -26,37 +26,44 @@
 <body>
     <?php navbar(); ?>
     <!-- home -->
-    <div id="home" class="flex justify-between mt-28" data-aos="fade-up">
+    <div id="home" class="flex md:flex-row flex-col-reverse justify-between items-center mt-28" data-aos="fade-up">
 
-        <div class="flex flex-col px-24 gap-5 mt-16">
-            <div class="flex flex-row gap-5 rounded-[98.62px] w-[230.56px] h-[55.23px] justify-center items-center bg-[#FFFFFF] shadow-2xl">
+        <!-- Bagian Teks -->
+        <div class="flex flex-col md:px-24 px-6 gap-5 md:mt-16 mt-0 md:items-start items-center text-center md:text-left">
+            <div class="flex flex-row gap-5 rounded-[98.62px] w-full md:w-[230.56px] h-[55.23px] justify-center items-center bg-[#FFFFFF] shadow-2xl">
                 <p class="font-poppins font-bold text-[13.81px] leading-[0.12em] text-[#F85E9F]">Explore the Bali!</p>
                 <?php iconTas(); ?>
             </div>
+
             <div>
-                <p class="font-poppins font-semibold text-[71px] leading-[1.2em] w-[588.74px] text-wrap">
+                <!-- Judul Responsif -->
+                <p class="font-poppins font-semibold text-[40px] md:text-[71px] leading-[1.2em] md:w-[588.74px] text-wrap">
                     Travel <span class="text-[#F85E9F]">top destination</span> of the Bali
                 </p>
             </div>
+
             <div>
-                <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 w-[421.1px]">
+                <!-- Deskripsi Responsif -->
+                <p class="font-poppins text-[14px] md:text-[16px] leading-[25.6px] text-[#191825]/75 md:w-[421.1px] w-full">
                     Where adventure meets comfort. We create unforgettable travel experiences
                 </p>
             </div>
-            <div class="flex flex-row gap-5">
-                <div class="rounded-[98.62px] bg-[#5D50C6] w-[143.12px] h-[48.56px] flex justify-center items-center shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105 cursor-pointer">
+
+            <!-- Tombol Get Started dan Watch Demo -->
+            <div class="flex flex-col md:flex-row w-full gap-5">
+                <div class="rounded-[98.62px] bg-[#5D50C6] w-full md:w-[143.12px] h-[48.56px] flex justify-center items-center shadow-xl shadow-[#5D50C6]/30 hover:bg-[#5D50C6]/60 transition-transform duration-200 hover:scale-105 cursor-pointer">
                     <p class="font-poppins text-[13.81px] font-semibold leading-[1.2em] text-[#EEEEEE]">Get Started</p>
                 </div>
                 <button data-modal-target="videoModal" data-modal-toggle="videoModal">
-                    <div class="rounded-[98.62px] bg-[#FFFFFF] w-[186.67px] h-[55.23px] flex justify-center items-center hover:bg-[#FFFFFF]/60 border-[#EEEEEE] border-[1px] border-solid  transition-transform duration-200 hover:scale-105 cursor-pointer gap-2">
+                    <div class="rounded-[98.62px] bg-[#FFFFFF] w-full md:w-[186.67px] h-[55.23px] flex justify-center items-center hover:bg-[#FFFFFF]/60 border-[#EEEEEE] border-[1px] border-solid transition-transform duration-200 hover:scale-105 cursor-pointer gap-2">
                         <?php watchDemo(); ?>
                         <p class="font-poppins text-[13.81px] leading-[1.2em] font-semibold text-[#222831]">Watch Demo</p>
                     </div>
                 </button>
             </div>
 
-            <!-- Modal structure for the video -->
-            <div id="videoModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full px-24">
+            <!-- Modal Video -->
+            <div id="videoModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full h-modal md:h-full px-6 md:px-24">
                 <div class="relative w-full max-w-3xl mx-auto h-auto">
                     <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                         <div class="flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600">
@@ -75,56 +82,63 @@
             </div>
         </div>
 
-        <div class="absolute right-0 mr-0 w-[1040px] overflow-hidden">
-            <img src="assets/home-banner.png" class="relative h-auto w-auto object-contain" alt="">
+        <!-- Bagian Gambar -->
+        <div class="w-full md:w-[1040px] md:mt-40 mt-0 md:absolute right-0 md:right-0 md:mr-0 mr-20 overflow-hidden px-6 md:px-0 flex justify-center items-center">
+            <img src="assets/home-banner.png" class="w-full h-auto md:w-auto" alt="Home Banner">
         </div>
+
 
     </div>
 
-    <!-- what we serve -->
-    <div class="mt-36 flex justify-between px-24">
 
-        <div class="flex flex-col gap-3"  data-aos="fade-up">
+    <!-- what we serve -->
+    <div class="mt-36 flex flex-col md:flex-row justify-between md:px-24 px-6 gap-10">
+
+        <!-- Bagian Kiri - Judul -->
+        <div class="flex flex-col gap-3 text-center md:text-left md:w-1/3" data-aos="fade-up">
             <p class="font-poppins font-semibold text-[17.75px] tracking-[0.018em] text-[#F85E9F]">
                 WHAT WE SERVE
             </p>
-            <p class="font-poppins font-bold text-[39.45px] leading-[1.3em] w-[233px] text-[#282542]">
-                Top Values 
-                For You
+            <p class="md:w-[233px] w-full font-poppins font-bold text-[30px] md:text-[39.45px] leading-[1.3em] text-[#282542]">
+                Top Values For You
             </p>
-            <p class="w-[244.27px] font-poppins text-[16px] tracking-[0.22px] leading-[22px] text-[#191825]/75">
+            <p class="font-poppins md:w-[244.27px] w-full text-[14px] md:text-[16px] tracking-[0.22px] leading-[22px] text-[#191825]/75">
                 Embrace life's vastness, venture forth,
             </p>
         </div>
 
-        <div class="flex flex-row gap-28" data-aos="fade-right">
+        <!-- Bagian Kanan - Konten Layanan -->
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-10 md:gap-28" data-aos="fade-right">
 
-            <div class="flex flex-col gap-5">
-                <img src="assets/lot-of-choice.png" class="w-[101.64px] h-[76.23px]" alt="">
-                <p class="font-poppins font-semibold text-[23.88px] leading-[31.8px] tracking-[0.1px] text-[#191825]">
+            <!-- Lot of choices -->
+            <div class="flex flex-col gap-5 items-center md:items-start">
+                <img src="assets/lot-of-choice.png" class="w-[80px] md:w-[101.64px] h-[60px] md:h-[76.23px]" alt="Lot of choices">
+                <p class="font-poppins font-semibold text-[20px] md:text-[23.88px] leading-[31.8px] text-[#191825] text-center md:text-left">
                     Lot of choices
                 </p>
-                <p class="font-poppins text-[16px] leading-[25.6px] w-[220.85px] text-[#191825]/75">
+                <p class="font-poppins text-[14px] md:text-[16px] leading-[25.6px] w-full text-center md:text-left text-[#191825]/75">
                     Embrace life's vastness, venture forth,
                 </p>
             </div>
 
-            <div class="flex flex-col gap-5" data-aos="fade-up">
-                <img src="assets/best-tour-guide.png" class="w-[83.96px] h-[78.29]" alt="">
-                <p class="font-poppins font-semibold text-[23.88px] leading-[31.8px] tracking-[0.1px] text-[#191825]">
+            <!-- Best Tour Guide -->
+            <div class="flex flex-col gap-5 items-center md:items-start" data-aos="fade-up">
+                <img src="assets/best-tour-guide.png" class="w-[70px] md:w-[83.96px] h-[60px] md:h-[78.29px]" alt="Best Tour Guide">
+                <p class="font-poppins font-semibold text-[20px] md:text-[23.88px] leading-[31.8px] text-[#191825] text-center md:text-left">
                     Best Tour Guide
                 </p>
-                <p class="font-poppins text-[16px] leading-[25.6px] w-[220.85px] text-[#191825]/75">
+                <p class="font-poppins text-[14px] md:text-[16px] leading-[25.6px] w-full text-center md:text-left text-[#191825]/75">
                     Embrace life's vastness, venture forth,
                 </p>
             </div>
 
-            <div class="flex flex-col gap-5" data-aos="fade-right">
-                <img src="assets/easy-booking.png" class="w-[111.39px] h-[85.8px]" alt="">
-                <p class="font-poppins font-semibold text-[23.88px] leading-[31.8px] tracking-[0.1px] text-[#191825]">
+            <!-- Easy Booking -->
+            <div class="flex flex-col gap-5 items-center md:items-start" data-aos="fade-right">
+                <img src="assets/easy-booking.png" class="w-[90px] md:w-[111.39px] h-[70px] md:h-[85.8px]" alt="Easy Booking">
+                <p class="font-poppins font-semibold text-[20px] md:text-[23.88px] leading-[31.8px] text-[#191825] text-center md:text-left">
                     Easy Booking
                 </p>
-                <p class="font-poppins text-[16px] leading-[25.6px] w-[220.85px] text-[#191825]/75">
+                <p class="font-poppins text-[14px] md:text-[16px] leading-[25.6px] w-full text-center md:text-left text-[#191825]/75">
                     Embrace life's vastness, venture forth,
                 </p>
             </div>
@@ -133,38 +147,41 @@
 
     </div>
 
-    <!-- choose your destination -->
-     <div class="mt-36 px-24">
-        <div class="flex flex-row justify-between" data-aos="fade-up">
 
-            <div class="flex flex-col">
-                <p class="font-poppins font-semibold text-[17.75px] tracking-[0.018em] leading-[1.2em] text-[#F85E9F] uppercase">
+    <!-- choose your destination -->
+     <div class="mt-36 md:px-24 px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-0" data-aos="fade-up">
+
+            <!-- Bagian Teks -->
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <p class="font-poppins font-semibold text-[16px] md:text-[17.75px] tracking-[0.018em] leading-[1.2em] text-[#F85E9F] uppercase">
                     choose your next destination
                 </p>
-                <p class="font-poppins font-semibold text-[39.45px] leading-[1.2em] text-[#191825]">
+                <p class="font-poppins font-semibold text-[32px] md:text-[39.45px] leading-[1.2em] text-[#191825]">
                     Explore top destination
                 </p>
             </div>
 
-            <div class="flex flex-row gap-9">
+            <!-- Bagian Tombol -->
+            <div class="flex gap-6 md:gap-9">
                 <button class="geserKeKiri">
-                    <div class="w-[47px] h-[47px] rounded-[98.62px] bg-[#F6F5F5] flex justify-center items-center shadow-md transition-transform duration-200 hover:scale-105 cursor-pointer hover:bg-[#F6F5F5]/50">
+                    <div class="w-[40px] md:w-[47px] h-[40px] md:h-[47px] rounded-[50%] bg-[#F6F5F5] flex justify-center items-center shadow-md transition-transform duration-200 hover:scale-105 cursor-pointer hover:bg-[#F6F5F5]/50">
                         <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.67978 17.2354L2.0449 9.60047L9.67978 1.96559" stroke="#5D50C6" stroke-width="2.95852" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </button>
                 <button class="geserKeKanan">
-                    <div class="w-[47px] h-[47px] rounded-[98.62px] bg-[#5D50C6] flex justify-center items-center shadow-md shadow-[#5D50C6]/50 transition-transform duration-200 hover:scale-105 cursor-pointer hover:bg-[#5D50C6]/50">
+                    <div class="w-[40px] md:w-[47px] h-[40px] md:h-[47px] rounded-[50%] bg-[#5D50C6] flex justify-center items-center shadow-md shadow-[#5D50C6]/50 transition-transform duration-200 hover:scale-105 cursor-pointer hover:bg-[#5D50C6]/50">
                         <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.46567 1.96582L10.1005 9.6007L2.46567 17.2356" stroke="white" stroke-width="2.95852" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </button>
-
             </div>
 
         </div>
+
 
         <!-- Card Section -->
         <div class="card-container overflow-x-hidden">
@@ -216,7 +233,7 @@
     
                 <!-- Card 2 -->
                 <div class="relative rounded-2xl p-5" data-aos="fade-right">
-                    <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                    <div class="md:w-[389px] w-full md:h-[276px] h-auto rounded-[38.89px] overflow-hidden">
                         <img src="assets/nice-and-cannes.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient hover:scale-125 transition-all duration-300">
                     </div>
                     <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
@@ -440,72 +457,80 @@
     </div>
 
     <!-- about page -->
-     <div id="about" class="flex px-24 flex-row justify-between">
-        <img src="assets/about-page.png" class="w-[801.76px] h-auto" alt="" data-aos="fade-up">
-        <div class="flex flex-col justify-center items-center mt-36" data-aos="fade-right">
-            <div class="flex flex-col gap-3">
-                <p class="font-poppins font-semibold text-[17.44px] leading-[1.2em] tracking-[0.018em] text-[#F85E9F]">
+    <div id="about" class="flex md:px-24 px-6 md:flex-row flex-col justify-between items-center gap-10">
+
+        <!-- Bagian Gambar -->
+        <img src="assets/about-page.png" class="w-full md:w-[801.76px] h-auto" alt="" data-aos="fade-up">
+
+        <!-- Bagian Teks dan Statistik -->
+        <div class="flex flex-col justify-center items-center md:items-start mt-10 md:mt-36" data-aos="fade-right">
+
+            <!-- Teks Utama -->
+            <div class="flex flex-col gap-3 text-center md:text-left items-center md:items-start">
+                <p class="font-poppins font-semibold text-[16px] md:text-[17.44px] leading-[1.2em] tracking-[0.018em] text-[#F85E9F]">
                     WE ARE THE BEST FOR YOU
                 </p>
-                <p class="font-poppins font-semibold text-[42.63px] leading-[1.2em] text-[#191825] w-[431.11px]">
+                <p class="font-poppins font-semibold text-[32px] md:text-[42.63px] leading-[1.2em] text-[#191825] w-full md:w-[431.11px]">
                     Unlock Your Dream Destination      
                 </p>
-                <p class="font-poppins text-[16px] leading-[1.6em] text-[#191825]/75 w-[431.11px]">
+                <p class="font-poppins text-[14px] md:text-[16px] leading-[1.6em] text-[#191825]/75 w-full md:w-[431.11px]">
                     We are dedicated to making your journey of discovery truly unforgettable. Our team of passionate travel experts is here to assist you in finding the destination of your dreams.
                 </p>
             </div>
 
-            <div class="mt-10 grid grid-cols-2 gap-10 px-5">
-                <div class="flex flex-col gap-2 justify-center items-center border border-[1px] border-solid-[#191825]/10 p-5 rounded-[31px]">
-                    <p class="font-poppins font-bold text-[33.91px] leading-[1.2em] text-[#F85E9F]">
+            <!-- Statistik -->
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 w-full">
+                <div class="flex flex-col gap-2 justify-center items-center border border-[1px] border-solid border-[#191825]/10 p-5 rounded-[31px]">
+                    <p class="font-poppins font-bold text-[28px] md:text-[33.91px] leading-[1.2em] text-[#F85E9F]">
                         4k+
                     </p>
-                    <p class="font-poppins text-[15.5px] leading-[1.6em] text-[#191825]">
+                    <p class="font-poppins text-[14px] md:text-[15.5px] leading-[1.6em] text-[#191825]">
                         Satisfied Customers
                     </p>
                 </div>
-                <div class="flex flex-col gap-2 justify-center items-center border border-[1px] border-solid-[#191825]/10 p-5 rounded-[31px]">
-                    <p class="font-poppins font-bold text-[33.91px] leading-[1.2em] text-[#F85E9F]">
+                <div class="flex flex-col gap-2 justify-center items-center border border-[1px] border-solid border-[#191825]/10 p-5 rounded-[31px]">
+                    <p class="font-poppins font-bold text-[28px] md:text-[33.91px] leading-[1.2em] text-[#F85E9F]">
                         24/7
                     </p>
-                    <p class="font-poppins text-[15.5px] leading-[1.6em] text-[#191825]">
+                    <p class="font-poppins text-[14px] md:text-[15.5px] leading-[1.6em] text-[#191825]">
                         Customer Support
                     </p>
                 </div>
-                <div class="flex flex-col gap-2 justify-center items-center border border-[1px] border-solid-[#191825]/10 p-5 rounded-[31px]">
-                    <p class="font-poppins font-bold text-[33.91px] leading-[1.2em] text-[#F85E9F]">
+                <div class="flex flex-col gap-2 justify-center items-center border border-[1px] border-solid border-[#191825]/10 p-5 rounded-[31px]">
+                    <p class="font-poppins font-bold text-[28px] md:text-[33.91px] leading-[1.2em] text-[#F85E9F]">
                         1000+
                     </p>
-                    <p class="font-poppins text-[15.5px] leading-[1.6em] text-[#191825]">
+                    <p class="font-poppins text-[14px] md:text-[15.5px] leading-[1.6em] text-[#191825]">
                         Bali Destinations
                     </p>
                 </div>
-                <div class="flex flex-col gap-2 justify-center items-center border border-[1px] border-solid-[#191825]/10 p-5 rounded-[31px]">
-                    <p class="font-poppins font-bold text-[33.91px] leading-[1.2em] text-[#F85E9F]">
+                <div class="flex flex-col gap-2 justify-center items-center border border-[1px] border-solid border-[#191825]/10 p-5 rounded-[31px]">
+                    <p class="font-poppins font-bold text-[28px] md:text-[33.91px] leading-[1.2em] text-[#F85E9F]">
                         100%
                     </p>
-                    <p class="font-poppins text-[15.5px] leading-[1.6em] text-[#191825]">
+                    <p class="font-poppins text-[14px] md:text-[15.5px] leading-[1.6em] text-[#191825]">
                         Dedication
                     </p>
                 </div>
             </div>
         </div>
-     </div>
+    </div>
+
 
      <!-- destination card again -->
-     <div id="destinations" class="mt-36 px-24" id="destinations">
-        <div class="flex flex-row justify-between" data-aos="fade-right">
+     <div id="destinations" class="mt-36 md:px-24 px-6" id="destinations">
+        <div class="flex md:flex-row flex-col md:justify-between justify-center text-center md:text-left items-center md:items-start" data-aos="fade-right">
 
             <div class="flex flex-col">
-                <p class="font-poppins font-semibold text-[18px] tracking-[0.018em] leading-[1.2em] text-[#F85E9F] uppercase">
+                <p class="font-poppins font-semibold text-[18px] tracking-[0.018em] leading-[1.2em] text-[#F85E9F] uppercase md:w-0 w-full">
                     Top Destination
                 </p>
-                <p class="font-poppins font-semibold text-[40px] leading-[1.2em] text-[#191825]">
+                <p class="font-poppins font-semibold text-[40px] leading-[1.2em] text-[#191825] md:w-0 w-full">
                     Explore top destination
                 </p>
             </div>
 
-            <div class="flex flex-row gap-10 justify-center items-center">
+            <div class="flex flex-row md:gap-10 gap-4 justify-center items-center">
 
                 <a href="#destinations" class="link-dns font-poppins font-medium text-[16px] leading-[1.2em] text-[#191825]/50 active">
                     City
@@ -528,10 +553,10 @@
         </div>
 
         <!-- Card Section -->
-        <div class="grid grid-cols-3 gap-10 mt-10 bg-white">
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-10 mt-10 bg-white">
             <!-- Card 1 -->
             <div class="relative rounded-2xl p-5" data-aos="fade-up">
-                <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                <div class="md:w-[389px] w-full md:h-[276px] h-auto rounded-[38.89px] overflow-hidden">
                     <img src="assets/tokyo.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
                 </div>
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
@@ -579,7 +604,7 @@
 
             <!-- Card 2 -->
             <div class="relative rounded-2xl p-5" data-aos="fade-up">
-                <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                <div class="md:w-[389px] w-full md:h-[276px] h-auto rounded-[38.89px] overflow-hidden">
                     <img src="assets/rome.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
                 </div>
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
@@ -627,7 +652,7 @@
 
             <!-- Card 3 -->
             <div class="relative rounded-2xl p-5" data-aos="fade-up">
-                <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                <div class="md:w-[389px] w-full md:h-[276px] h-auto rounded-[38.89px] overflow-hidden">
                     <img src="assets/barselona.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
                 </div>
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
@@ -674,7 +699,7 @@
             </div>
             <!-- Card 4 -->
             <div class="relative rounded-2xl p-5" data-aos="fade-up">
-                <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                <div class="md:w-[389px] w-full md:h-[276px] h-auto rounded-[38.89px] overflow-hidden">
                     <img src="assets/bangkok.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
                 </div>
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
@@ -721,7 +746,7 @@
             </div>
             <!-- Card 5 -->
             <div class="relative rounded-2xl p-5" data-aos="fade-up">
-                <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                <div class="md:w-[389px] w-full md:h-[276px] h-auto rounded-[38.89px] overflow-hidden">
                     <img src="assets/sydney.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
                 </div>
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
@@ -768,7 +793,7 @@
             </div>
             <!-- Card 6 -->
             <div class="relative rounded-2xl p-5" data-aos="fade-up">
-                <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                <div class="md:w-[389px] w-full md:h-[276px] h-auto rounded-[38.89px] overflow-hidden">
                     <img src="assets/toronto.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient shadow-lg hover:scale-125 transition-all duration-300">
                 </div>
                 <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
@@ -817,49 +842,49 @@
     </div>
 
     <!-- Experience -->
-    <div class="px-24 flex flex-row justify-between mt-20">
-        <div class="flex flex-col gap-3 mt-20" data-aos="fade-right">
+    <div class="md:px-24 px-6 flex md:flex-row flex-col-reverse justify-between mt-20">
+        <div class="flex flex-col gap-3 mt-20 md:w-0 w-full md:items-start items-center text-center md:text-left" data-aos="fade-right">
             <p class="font-poppins font-semibold text-[17.75px] leading-[19.7px] tracking-[0.018em] text-[#F85E9F]">
                 Our Experience
             </p>
-            <p class="font-poppins text-[48px] leading-[65.1px] text-[#2D3134] w-[430px]">
+            <p class="font-poppins text-[48px] leading-[65.1px] text-[#2D3134] w-full md:w-[430px]">
                 Crafting Unforgettable Adventures
             </p>
-            <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 w-[460.54px]">
+            <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 w-full md:w-[460.54px]">
                 We excel in curating remarkable journeys, specializing in outdoor destinations around the globe. With a wealth of experience, we bring adventures to life and invite you to embark on your own. The call of nature awaits—begin your adventure today!
             </p>
-            <div class="flex flex-row gap-20 mt-3">
+            <div class="flex md:flex-row flex-col gap-20 mt-3">
                 <div class="flex flex-col gap-6">
                     <p class="font-poppins font-semibold text-[45.36px] text-[#F85E9F] leading-[45.4px]">1,000+</p>
-                    <p class="font-poppins text-[15.78px] leading-[28.6px] text-[#0C111F] w-[130px]">outdoor destinations</p>
+                    <p class="font-poppins text-[15.78px] leading-[28.6px] text-[#0C111F] md:w-[130px] w-full">outdoor destinations</p>
                 </div>
                 <div class="flex flex-col gap-6">
                     <p class="font-poppins font-semibold text-[45.36px] text-[#F85E9F] leading-[45.4px]">98%</p>
-                    <p class="font-poppins text-[15.78px] leading-[28.6px] text-[#0C111F] w-[98.62px]">customer satisfaction</p>
+                    <p class="font-poppins text-[15.78px] leading-[28.6px] text-[#0C111F] md:w-[98.62px] w-full">customer satisfaction</p>
                 </div>
                 <div class="flex flex-col gap-6">
                     <p class="font-poppins font-semibold text-[45.36px] text-[#F85E9F] leading-[45.4px]">15+</p>
-                    <p class="font-poppins text-[15.78px] leading-[28.6px] text-[#0C111F] w-[113.41px]">Years Of Experience</p>
+                    <p class="font-poppins text-[15.78px] leading-[28.6px] text-[#0C111F] md:w-[113.41px] w-full">Years Of Experience</p>
                 </div>
             </div>
         </div>
-        <div class="absolute right-0 mr-0 w-[800px] overflow-hidden" data-aos="fade-up">
-            <img src="assets/banner-experience.png" class="relative h-auto w-auto object-contain" alt="">
+        <div class="relative md:absolute right-0 mr-0 md:w-[800px] w-full overflow-hidden" data-aos="fade-up">
+            <img src="assets/banner-experience.png" class="relative h-auto md:w-full w-auto object-contain" alt="">
         </div>
     </div>
 
-    <div class="flex flex-row justify-between mt-36 px-24">
-        <div class="flex flex-col gap-3" data-aos="fade-right">
-            <p class="font-poppins font-bold text-[40px] leading-[1.3em] tracking-[-0.01em] text-[#0C111F] w-[500px]">
+    <div class="flex md:flex-row flex-col justify-between mt-36 md:px-24 px-6">
+        <div class="flex flex-col gap-3 md:w-0 w-full md:items-start items-center text-center md:text-left" data-aos="fade-right">
+            <p class="font-poppins font-bold text-[40px] leading-[1.3em] tracking-[-0.01em] text-[#0C111F] w-full md:w-[500px]">
                 Meet Our Expert Tour Guides
             </p>
-            <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 w-[400px]">
+            <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 w-full md:w-[400px]">
                 Our journeys are enriched by our team of seasoned tour guides. Our guides bring your adventures to life with their expertise, passion
             </p>
 
-            <div class="relative w-[510.84px] flex flex-row gap-3">
-                <div class="w-[510.84px] h-[296.84px] rounded-[29.59px] overflow-hidden">
-                    <img src="assets/healing-di-kebun-raya-bedugul.jpg" class="h-full w-auto hover:scale-125 transition-all duration-300" alt="">
+            <div class="relative w-full md:w-[510.84px] flex flex-row gap-3">
+                <div class="md:w-[510.84px] w-full h-[296.84px] rounded-[29.59px] overflow-hidden">
+                    <img src="assets/healing-di-kebun-raya-bedugul.jpg" class="h-full md:w-auto w-full hover:scale-125 transition-all duration-300" alt="">
                 </div>
                 <div class="absolute left-4 top-5 rounded-[98.62px] bg-[#404040]/25 px-5 py-3 flex flex-row gap-3 justify-center items-center">
                     <?php location(); ?>
@@ -873,43 +898,43 @@
                 <div class="absolute top-0 right-0">
                     <?php artCircleRight(); ?>
                 </div>
-                <div class="flex flex-col justify-end items-end">
+                <div class="md:block hidden flex flex-col justify-end items-end">
                     <?php artCircleYellow(); ?>
                 </div>
             </div>
         </div>
-        <div class="flex flex-col items-center justify-center gap-10" data-aos="fade-right">
-            <div class="flex flex-row gap-10">
+        <div class="flex flex-col justify-center gap-10 md:items-start items-center text-center md:text-left md:mt-0 mt-12" data-aos="fade-right">
+            <div class="flex md:flex-row flex-col gap-10 w-full items-center">
                 <?php iconLikeExperience(); ?>
                 <div class="flex flex-col">
                     <p class="font-poppins font-bold text-[23.67px] leading-[27.6px] text-[#0C111F]">
                         Expertise
                     </p>
-                    <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 w-[422.08px]">
+                    <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 md:w-[422.08px] w-full">
                         Our guides are experts in their fields, ensuring in-depth knowledge and insights into every destination.
                     </p>
                 </div>
             </div>
             <div class="divider h-[3px] w-full bg-[#f7f7f7]"></div>
-            <div class="flex flex-row gap-10">
+            <div class="flex md:flex-row flex-col gap-10 w-full items-center">
                 <?php iconLoveExperience(); ?>
                 <div class="flex flex-col">
                     <p class="font-poppins font-bold text-[23.67px] leading-[27.6px] text-[#0C111F]">
                         Passion
                     </p>
-                    <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 w-[422.08px]">
+                    <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 md:w-[422.08px] w-full">
                         They are passionate about travel, culture, and history, making your journey engaging and captivating.
                     </p>
                 </div>
             </div>
             <div class="divider h-[3px] w-full bg-[#f7f7f7]"></div>
-            <div class="flex flex-row gap-10">
+            <div class="flex md:flex-row flex-col gap-10 w-full items-center">
                 <?php iconDedicationExperience(); ?>
                 <div class="flex flex-col">
                     <p class="font-poppins font-bold text-[23.67px] leading-[27.6px] text-[#0C111F]">
                         Dedication
                     </p>
-                    <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 w-[422.08px]">
+                    <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 md:w-[422.08px] w-full">
                         Our guides are dedicated to providing exceptional service and ensuring your travel memories are truly unforgettable.
                     </p>
                 </div>
@@ -918,25 +943,25 @@
     </div>
 
     <!-- newsletter -->
-    <div class="px-24 mt-36 mb-36" data-aos="fade-up" id="contact">
-        <div class="relative bg-[#FACD49] w-full h-[353px] flex flex-col justify-center items-center rounded-[29.59px]">
+    <div class="md:px-24 px-6 mt-36 mb-36" data-aos="fade-up" id="contact">
+        <div class="md:px-0 px-2 relative bg-[#FACD49] w-full h-[353px] flex flex-col justify-center items-center rounded-[29.59px]">
             <div class="flex flex-col gap-5 justify-center items-center text-center mb-10">
                 <p class="font-poppins font-semibold text-[39.45px] leading-[39.4px] tracking-[0.0015] text-[#2D3134]">
                     Sign up to our newsletter
                 </p>
-                <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 w-[400px]">
+                <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 md:w-[400px] w-full">
                     Stay updated with our latest news and offers. Join our newsletter now!                </p>
             </div>
-            <div class="flex items-center bg-white rounded-[11.83px] shadow-lg p-2 w-[443.78px] h-[59.17px]">
-                <input type="email" placeholder="Enter Your email address" class="w-full py-2 px-4 font-poppins text-[13.81px] leading-[13.8px] text-[#5B5F62] focus:outline-none rounded-full">
+            <div class="flex items-center bg-white rounded-[11.83px] shadow-lg p-2 w-full md:w-[443.78px] h-[59.17px]">
+                <input type="email" placeholder="Enter Your email address" class="w-full py-2 px-4 font-poppins text-[13.81px] leading-[13.8px] text-[#5B5F62] focus:outline-none rounded-full md:mx-0 mx-2">
                 <button class="w-[40px] h-[40px] bg-[#816AFF] hover:bg-[#816AFF]/60 rounded-[13.81px] shadow-lg shadow-[#816AFF]/40 flex justify-center items-center text-center">
                     <?php iconButtonNewsLetter(); ?>
                 </button>
             </div>
-            <div class="absolute left-2 top-0">
+            <div class="absolute md:block hidden left-2 top-0">
                 <?php pesawatNewsletter(); ?>
             </div>
-            <div class="absolute right-10 top-0">
+            <div class="absolute md:block hidden right-10 top-0">
                 <?php locationNewsletter(); ?>
             </div>
         </div>
