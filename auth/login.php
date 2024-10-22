@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="bg-gradient-to-r from-blue/20 to-pink/20 w-full h-screen py-24 px-56">
-        <div class="bg-white flex flex-row justify-between w-full h-full rounded-[30px] overflow-hidden" data-aos="fade-up">
+        <div class="bg-white flex md:flex-row flex-col justify-between w-full h-full rounded-[30px] overflow-hidden" data-aos="fade-up">
             <div class="w-1/2 flex flex-col p-12">
                 <div class="">
                     <p class="font-poppins font-semibold text-[36px] text-[#D885A3]">Made Subudi Bali Tour!</p>

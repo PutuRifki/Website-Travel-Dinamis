@@ -233,8 +233,8 @@
     
                 <!-- Card 2 -->
                 <div class="relative rounded-2xl p-5" data-aos="fade-right">
-                    <div class="md:w-[389px] w-full md:h-[276px] h-auto rounded-[38.89px] overflow-hidden">
-                        <img src="assets/nice-and-cannes.png" alt="Cappadocia" class="w-auto h-full object-cover rounded-[40px] shadow-gradient hover:scale-125 transition-all duration-300">
+                    <div class="w-[389px] h-[276px] rounded-[38.89px] overflow-hidden">
+                        <img src="assets/nice-and-cannes.png" alt="Cappadocia" class="w-full h-auto object-cover rounded-[40px] shadow-gradient hover:scale-125 transition-all duration-300">
                     </div>
                     <div class="absolute top-10 right-10 bg-[#0C111F]/20 rounded-[44.34px] w-[91px] h-[42.57px] flex justify-center items-center gap-2">
                         <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -457,7 +457,7 @@
     </div>
 
     <!-- about page -->
-    <div id="about" class="flex md:px-24 px-6 md:flex-row flex-col justify-between items-center gap-10">
+    <div id="about" class="flex md:px-24 px-6 md:flex-row flex-col justify-between items-center gap-10 md:mt-0 mt-20">
 
         <!-- Bagian Gambar -->
         <img src="assets/about-page.png" class="w-full md:w-[801.76px] h-auto" alt="" data-aos="fade-up">
@@ -522,10 +522,10 @@
         <div class="flex md:flex-row flex-col md:justify-between justify-center text-center md:text-left items-center md:items-start" data-aos="fade-right">
 
             <div class="flex flex-col">
-                <p class="font-poppins font-semibold text-[18px] tracking-[0.018em] leading-[1.2em] text-[#F85E9F] uppercase md:w-0 w-full">
+                <p class="font-poppins font-semibold text-[18px] tracking-[0.018em] leading-[1.2em] text-[#F85E9F] uppercase w-full">
                     Top Destination
                 </p>
-                <p class="font-poppins font-semibold text-[40px] leading-[1.2em] text-[#191825] md:w-0 w-full">
+                <p class="font-poppins font-semibold text-[40px] leading-[1.2em] text-[#191825] w-full">
                     Explore top destination
                 </p>
             </div>
@@ -842,8 +842,8 @@
     </div>
 
     <!-- Experience -->
-    <div class="md:px-24 px-6 flex md:flex-row flex-col-reverse justify-between mt-20">
-        <div class="flex flex-col gap-3 mt-20 md:w-0 w-full md:items-start items-center text-center md:text-left" data-aos="fade-right">
+    <div class="md:px-24 px-6 flex md:flex-row flex-col-reverse justify-between md:mt-0 mt-36">
+        <div class="flex flex-col gap-3 mt-20 w-full md:items-start items-center text-center md:text-left" data-aos="fade-right">
             <p class="font-poppins font-semibold text-[17.75px] leading-[19.7px] tracking-[0.018em] text-[#F85E9F]">
                 Our Experience
             </p>
@@ -946,7 +946,7 @@
     <div class="md:px-24 px-6 mt-36 mb-36" data-aos="fade-up" id="contact">
         <div class="md:px-0 px-2 relative bg-[#FACD49] w-full h-[353px] flex flex-col justify-center items-center rounded-[29.59px]">
             <div class="flex flex-col gap-5 justify-center items-center text-center mb-10">
-                <p class="font-poppins font-semibold text-[39.45px] leading-[39.4px] tracking-[0.0015] text-[#2D3134]">
+                <p class="font-poppins font-semibold md:text-[39.45px] text-[30px] leading-[39.4px] tracking-[0.0015] text-[#2D3134]">
                     Sign up to our newsletter
                 </p>
                 <p class="font-poppins text-[16px] leading-[25.6px] text-[#191825]/75 md:w-[400px] w-full">
